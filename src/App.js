@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
-          <h1>ToDo App</h1>
+          <Navbar />
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
