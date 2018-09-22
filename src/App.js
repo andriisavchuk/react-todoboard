@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Dashboard from './components/dashboard/Dashboard';
+import ToDoDetails from './components/todo/ToDoDetails';
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
-          <h1>ToDo App</h1>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route path="/todo/:id" component={ToDoDetails} />
+          </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
