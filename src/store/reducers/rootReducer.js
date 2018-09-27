@@ -4,7 +4,7 @@ import todoReducer from './todoReducer';
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  todo: todoReducer
+  todoList: todoReducer
 });
 
 export default rootReducer;

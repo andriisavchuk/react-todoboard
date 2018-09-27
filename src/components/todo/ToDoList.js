@@ -1,13 +1,14 @@
 import React from 'react';
-import ToDoSummury from './ToDoSummury';
+import ToDoSummary from './ToDoSummary';
 
-const ToDoList = () => {
+const ToDoList = ({todos}) => {
   return (
     <div className="todo-list section">
-      <ToDoSummury />
-      <ToDoSummury />
-      <ToDoSummury />
-      <ToDoSummury />
+      {todos && todos.map(todo => {
+        return(
+          <ToDoSummary todo={todo} key={todo.id}/>
+        )
+      })}
     </div>
   );
 };
