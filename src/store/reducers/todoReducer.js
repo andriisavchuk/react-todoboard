@@ -7,6 +7,10 @@ const initialState = {
 };
 
 const todoReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'CREATE_TODO':
+      console.log('ToDo created', action.todo);
+  }
   return state;
 };
 
